@@ -1,10 +1,14 @@
 package dev.Projeto.ProjetoCadastro;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
-@Entity
+// JPA - Java Persistence API
+@Entity //Transforma uma classe em uma entidade do banco de dados.
+@Table(name = "tb_cadastro_de_ninjas") //Cria uma tabela.
 public class NinjaModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Gera Id de forma automática, utilizando como entidade.
     Long id;
     String nome;
     String email;
@@ -43,4 +47,6 @@ public class NinjaModel {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+
 }
