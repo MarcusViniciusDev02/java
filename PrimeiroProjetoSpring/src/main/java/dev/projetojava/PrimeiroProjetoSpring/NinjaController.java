@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 //Marca que é aqui que irei criar minhas rotas.
 @RequestMapping("/")
-public class Controller {
+public class NinjaController {
     //Recebe requisições de leitura.
     @GetMapping("/boasvindas")
     public String boasVindas(){
