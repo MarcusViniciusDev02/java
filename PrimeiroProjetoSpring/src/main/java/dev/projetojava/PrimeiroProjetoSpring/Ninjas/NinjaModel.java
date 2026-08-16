@@ -1,12 +1,13 @@
 package dev.projetojava.PrimeiroProjetoSpring;
 
+import dev.projetojava.PrimeiroProjetoSpring.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
-//Entity - Transforma uma classe em uma entidade no Banco de Dados
+
 //Java Persistence API = JPA
 
-@Entity
-@Table(name = "tb_cadastro_de_ninjas")
+@Entity //Entity - Transforma uma classe em uma entidade no Banco de Dados
+@Table(name = "tb_cadastro_de_ninjas") //Cria uma tabela para a entidade.
 public class NinjaModel {
 
     @Id // O atributo abaixo será um Id na tabela
@@ -15,6 +16,12 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    @ManyToOne
+    //Cada ninja poderá ter uma única missão.
+    @JoinColumn(name = "missoes_id")
+    //@joinColumn - Cria um agrupamento de colunas.
+    //Foreing Key - Chave estrangeira.
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
