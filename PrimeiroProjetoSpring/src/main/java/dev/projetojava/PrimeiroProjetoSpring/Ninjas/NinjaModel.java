@@ -19,7 +19,7 @@ public class NinjaModel {
     private String email;
     private int idade;
     @ManyToOne
-    //Cada ninja poderá ter uma única missão.
+    //Cada ninja só poderá participar uma única missão.
     @JoinColumn(name = "missoes_id")
     //@joinColumn - Cria um agrupamento de colunas.
     //Foreing Key - Chave estrangeira.
