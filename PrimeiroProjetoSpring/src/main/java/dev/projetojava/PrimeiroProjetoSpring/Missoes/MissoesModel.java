@@ -1,12 +1,18 @@
 package dev.projetojava.PrimeiroProjetoSpring.Missoes;
 
-import dev.projetojava.PrimeiroProjetoSpring.NinjaController;
+import dev.projetojava.PrimeiroProjetoSpring.Ninjas.NinjaController;
 import dev.projetojava.PrimeiroProjetoSpring.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
+@NoArgsConstructor //Cria construtor sem argumentos
+@AllArgsConstructor //Cria construtores com argumentos
+@Data // Cria os getters e setters
 public class MissoesModel {
 
     @Id

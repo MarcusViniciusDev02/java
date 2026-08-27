@@ -1,4 +1,4 @@
-package dev.projetojava.PrimeiroProjetoSpring;
+package dev.projetojava.PrimeiroProjetoSpring.Ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NinjaController {
     //Recebe requisições de leitura.
     @GetMapping("/boasvindas")
-    public String boasVindas(){
+    public String boasVindas() {
         return "Olá mundo!";
     }
 
