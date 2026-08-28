@@ -1,9 +1,11 @@
 package dev.projetojava.PrimeiroProjetoSpring.Ninjas;
+
 import dev.projetojava.PrimeiroProjetoSpring.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 //Java Persistence API = JPA
 @Entity //Entity - Transforma uma classe em uma entidade no Banco de Dados
 @Table(name = "tb_cadastro_de_ninjas") //Cria uma tabela para a entidade.
@@ -19,11 +21,8 @@ public class NinjaModel {
     @Column(unique = true) //Coloco essa coluna como única.
     private String email;
     private int idade;
-    @ManyToOne
-    //Cada ninja só poderá participar uma única missão.
-    @JoinColumn(name = "missoes_id")
-    //@joinColumn - Cria um agrupamento de colunas.
-    //Foreing Key - Chave estrangeira.
+    @ManyToOne  //Cada ninja só poderá participar uma única missão.
+    @JoinColumn(name = "missoes_id") //@joinColumn - Cria um agrupamento de colunas.
     private MissoesModel missoes;
 
 }
