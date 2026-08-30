@@ -23,6 +23,5 @@ public class MissoesModel {
     @OneToMany(mappedBy = "missoes")// Uma missão pode ter vários ninjas.
     //mappedBy - Direciona para onde essa coluna vai ser mapeada.
     private List<NinjaModel> ninjas;
-    private List<NinjaController> NinjaController;
 
 }
