@@ -17,9 +17,13 @@ public class NinjaModel {
     @Id // O atributo abaixo será um Id na tabela
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Cria estratégia de como o ID será criado.
     private Long id;
+    @Column(name = "nome")
     private String nome;
     @Column(unique = true) //Coloco essa coluna como única.
     private String email;
+    @Column(name = "imgUrl")
+    private String imgUrl;
+    @Column(name = "idade")
     private int idade;
     @ManyToOne  //Cada ninja só poderá participar uma única missão.
     @JoinColumn(name = "missoes_id") //@joinColumn - Cria um agrupamento de colunas.
