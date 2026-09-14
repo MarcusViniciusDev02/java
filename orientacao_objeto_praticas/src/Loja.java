@@ -26,15 +26,16 @@ public class Loja<T extends Produto> {
             }
         }
     }
-
+    
     public void removerItem(int codigo) {
+        //percorre a lista para ver se o produto está dentro dela.
         for (T p : listaDeProdutos) {
             if (codigo == p.getCodigo()) {
                 System.out.println("Produto encontrado");
-
+                //ao achar, pergunta se quero excluir o produto
                 System.out.println("Deseja remover produto?");
                 String resp = ent.nextLine();
-
+                //caso sim, ele deleta o produto e para a aplicação.
                 if (resp.equalsIgnoreCase("Sim")) {
                     System.out.println("Produto removido");
                     listaDeProdutos.remove(p);
@@ -44,11 +45,6 @@ public class Loja<T extends Produto> {
         }
 
         System.out.println("Produto removido.");
-
-
-
-
-
     }
 
     public void mostrarItem(T produto) {

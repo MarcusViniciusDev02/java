@@ -1,7 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Olá mundo");
+       double aX;
+       double bX;
+       double cX;
+       double aY;
+       double bY;
+       double cY;
+    
+       
 
     }
 }
-//Wraper class aceita naturalmente o valor nulo.
