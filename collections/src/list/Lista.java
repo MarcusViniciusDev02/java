@@ -1,7 +1,9 @@
+package list;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Lista {
     public static void main(String[] args) {
         //Array
         //Arrays são estáticos, não alteram de tamanho.
